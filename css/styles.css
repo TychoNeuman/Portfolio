@@ -1,0 +1,90 @@
+:root {
+  --text-color: #2B2118;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+.hidden {
+  display:none;
+}
+
+.div {
+   height: 100vh;
+   text-align: center;
+}
+
+.div::after {
+  content: "";
+  background: url(../img/background.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.div2 {
+  height: 100vh;
+  background: rgb(247,243,227);
+  background: linear-gradient(8deg, rgba(247,243,227,1) 0%, rgba(251,251,251,1) 96%, rgba(251,251,251,1) 100%);
+  text-align: center;
+}
+
+.div3 {
+  height: 100vh;
+  background-color: red;
+}
+
+#bobbie {
+  max-width: 150px;
+  max-height: 150px;
+  border: 1.5px solid var(--text-color);;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+#profile_name {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3em;
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  top: 16%;
+}
+
+.title {
+  font-size: 2em;
+  position: absolute;
+  margin: auto;
+  top: 77%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-12px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
