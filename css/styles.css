@@ -4,12 +4,30 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Inconsolata', monospace;
   color: var(--text-color);
+}
+
+li {
+  list-style: none;
 }
 
 .hidden {
   display:none;
+}
+
+.loading {
+   height: 100vh;
+   background-color: white;
+   display: flex;
+   justify-content: center;
+}
+
+#loading {
+  display: block;
+  max-height: 150px;
+  max-width: 150px;
+  margin: 0;
 }
 
 .div {
@@ -31,14 +49,57 @@ body {
 
 .div2 {
   height: 100vh;
-  background: rgb(247,243,227);
-  background: linear-gradient(8deg, rgba(247,243,227,1) 0%, rgba(251,251,251,1) 96%, rgba(251,251,251,1) 100%);
+  background: yellow;
+  /* background: rgb(247,243,227);
+  background: linear-gradient(8deg, rgba(247,243,227,1) 0%, rgba(251,251,251,1) 96%, rgba(251,251,251,1) 100%); */
   text-align: center;
+}
+
+.div2 > h1 {
+  letter-spacing: 13px;
+  font-size: 10em;
+  text-align: right;
+  position: relative;
+  top: -560px;
+}
+
+.photo1 {
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  position: relative;
+  top: 100px;
+  left: 30%;
+}
+
+.photo2 {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+  position: relative;
+  top: 0;
+  left: 45%;
 }
 
 .div3 {
   height: 100vh;
-  background-color: red;
+  background: rgb(247,243,227);
+  background: linear-gradient(191deg, rgba(247,243,227,1) 0%, rgba(247,243,227,1) 25%, rgba(179,182,183,1) 100%);
+}
+
+.div3 > h1 {
+  letter-spacing: 13px;
+  font-size: 10em;
+  text-align: right;
+  float: right;
+  margin-right: 30px;
+}
+
+.div4 {
+  height: 100vh;
+  background: rgb(247,243,227);
+  background: linear-gradient(8deg, rgba(247,243,227,1) 0%, rgba(251,251,251,1) 96%, rgba(251,251,251,1) 100%);
+  text-align: center;
 }
 
 #bobbie {
@@ -46,7 +107,7 @@ body {
   max-height: 150px;
   border: 1.5px solid var(--text-color);;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   margin: auto;
   left: 0;
   right: 0;
@@ -66,12 +127,18 @@ body {
 
 .title {
   font-size: 2em;
-  position: absolute;
+  position: relative;
   margin: auto;
   top: 77%;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 @keyframes float {
