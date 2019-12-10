@@ -21,7 +21,6 @@
 /*/............/*/
 
 /* Base */
-
 /* * {
     border: 1px solid black;
 } */
@@ -30,7 +29,7 @@ body {
     margin: 0;
     font-family: 'Inconsolata', monospace;
     color: var(--text-color);
-    text-shadow: -2px 0 var(--text-color-dark), 0 2px var(--text-color-dark), 2px 0 var(--text-color-dark), 0 -2px var(--text-color-dark);
+    box-sizing: border-box;
   }
 
 /* All-Round */
@@ -47,9 +46,19 @@ body {
     text-align: center;
 }
 
+.shadow {
+    text-shadow: -2px 0 var(--text-color-dark), 0 2px var(--text-color-dark), 2px 0 var(--text-color-dark), 0 -2px var(--text-color-dark);
+}
+
 .section-title{
-    letter-spacing: 13px;
-    font-size: 9em;
+    letter-spacing: 11px;
+    font-size: 7em;
+}
+
+.photo {
+    max-width: 200px;
+    border-radius: 100px;
+    margin: 10px;
 }
 
 /* Navigation */
@@ -81,7 +90,12 @@ body {
 
 .about-me {
     background-color: var(--about-me-background);
-    justify-content: end;
+    justify-content: space-between;
+}
+
+.section-container {
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Portfolio */
@@ -102,9 +116,9 @@ body {
 }
 
 
-/*////////////*/
-/* -- Id's -- */
-/*////////////*/
+/*.........../*/
+/*/ - Id's - /*/
+/*/........../*/
 
 #profile-name{
     font-family: 'Shadows Into Light', cursive;
