@@ -46,6 +46,10 @@ body {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .shadow {
     text-shadow: -2px 0 var(--text-color-dark), 0 2px var(--text-color-dark), 2px 0 var(--text-color-dark), 0 -2px var(--text-color-dark);
 }
