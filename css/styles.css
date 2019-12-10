@@ -1,157 +1,143 @@
+/****************************/
+/*     TYCHO'S PORTFOLIO    */
+/****************************/
+
+/*/............/*/
+/*/ - Colors - /*/
+/*/............/*/
 :root {
-  --text-color: #2B2118;
+    /* --text-color: #2B2118; */
+    --text-color: white;
+    --text-color-dark: #2B2118;
+    --landing-page-background: #41B3A3;
+    --about-me-background: #C38D9E;
+    --portfolio-background: #E8A87C;
+    --skills-background-color: #E27D60;
+    --contact-background-color: #85CDCA;
 }
+
+/*/............/*/
+/*/ - Styles - /*/
+/*/............/*/
+
+/* Base */
+
+/* * {
+    border: 1px solid black;
+} */
 
 body {
-  margin: 0;
-  font-family: 'Inconsolata', monospace;
-  color: var(--text-color);
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    color: var(--text-color);
+    text-shadow: -2px 0 var(--text-color-dark), 0 2px var(--text-color-dark), 2px 0 var(--text-color-dark), 0 -2px var(--text-color-dark);
+  }
+
+/* All-Round */
+
+.full-height {
+    height: 100vh;
 }
 
-li {
-  list-style: none;
+.flex {
+    display: flex;
 }
 
-.hidden {
-  display:none;
+.text-centered{
+    text-align: center;
 }
 
-.loading {
-   height: 100vh;
-   background-color: white;
-   display: flex;
-   justify-content: center;
+.section-title{
+    letter-spacing: 13px;
+    font-size: 9em;
 }
 
-#loading {
-  display: block;
-  max-height: 150px;
-  max-width: 150px;
-  margin: 0;
+/* Navigation */
+.navigation {
+    margin: 10px;
 }
 
-.div {
-   height: 100vh;
-   text-align: center;
+.navigation > a {
+    text-decoration: none;
+    text-shadow: none;
+    margin: 10px;
+    color: white;
 }
 
-.div::after {
-  content: "";
-  background: url(../img/background.jpg);
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+.navigation > a:hover {
+    color: var(--text-color-dark);
 }
 
-.div2 {
-  height: 100vh;
-  background: yellow;
-  /* background: rgb(247,243,227);
-  background: linear-gradient(8deg, rgba(247,243,227,1) 0%, rgba(251,251,251,1) 96%, rgba(251,251,251,1) 100%); */
-  text-align: center;
+/* Landing Page */
+
+.landing-page {
+    background-color: var(--landing-page-background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.div2 > h1 {
-  letter-spacing: 13px;
-  font-size: 10em;
-  text-align: right;
-  position: relative;
-  top: -560px;
+/* About Me */
+
+.about-me {
+    background-color: var(--about-me-background);
+    justify-content: end;
 }
 
-.photo1 {
-  height: 300px;
-  width: 300px;
-  background-color: green;
-  position: relative;
-  top: 100px;
-  left: 30%;
+/* Portfolio */
+
+.portfolio{
+    background-color: var(--portfolio-background);
 }
 
-.photo2 {
-  height: 300px;
-  width: 300px;
-  background-color: blue;
-  position: relative;
-  top: 0;
-  left: 45%;
+/* Skills */
+.skills {
+    background-color: var(--skills-background-color);
 }
 
-.div3 {
-  height: 100vh;
-  background: rgb(247,243,227);
-  background: linear-gradient(191deg, rgba(247,243,227,1) 0%, rgba(247,243,227,1) 25%, rgba(179,182,183,1) 100%);
+/* Contact */
+
+.contact {
+    background-color: var(--contact-background-color);
 }
 
-.div3 > h1 {
-  letter-spacing: 13px;
-  font-size: 10em;
-  text-align: right;
-  float: right;
-  margin-right: 30px;
+
+/*////////////*/
+/* -- Id's -- */
+/*////////////*/
+
+#profile-name{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 3em;
 }
 
-.div4 {
-  height: 100vh;
-  background: rgb(247,243,227);
-  background: linear-gradient(8deg, rgba(247,243,227,1) 0%, rgba(251,251,251,1) 96%, rgba(251,251,251,1) 100%);
-  text-align: center;
+#bobbie{
+    max-width: 150px;
+    max-height: 150px;
+    border: 1.5px solid var(--text-color-dark);
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
 }
 
-#bobbie {
-  max-width: 150px;
-  max-height: 150px;
-  border: 1.5px solid var(--text-color);;
-  border-radius: 50%;
-  position: fixed;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  animation: float 3s ease-in-out infinite;
+#profile-title{
+    margin: 70px;
 }
 
-#profile_name {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 3em;
-  position: relative;
-  max-width: 400px;
-  margin: auto;
-  top: 16%;
-}
 
-.title {
-  font-size: 2em;
-  position: relative;
-  margin: auto;
-  top: 77%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
+/*/................/*/
+/*/ - Animations - /*/
+/*/................/*/
 @keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-12px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translatey(-12px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
 }
