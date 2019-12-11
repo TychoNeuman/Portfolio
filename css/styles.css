@@ -14,6 +14,7 @@
     --portfolio-background: #E8A87C;
     --skills-background-color: #E27D60;
     --contact-background-color: #85CDCA;
+    --white: #fdf5e6;
 }
 
 /*/............/*/
@@ -28,14 +29,23 @@
 body {
     margin: 0;
     font-family: 'Inconsolata', monospace;
-    color: var(--text-color);
+    color: var(--white);
     box-sizing: border-box;
+    background-color: var(--white);
   }
 
 /* All-Round */
 
 .full-height {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.mid-height{
+    max-height: 90vh;
+}
+
+.small-height {
+    max-height: 85vh;
 }
 
 .flex {
@@ -60,9 +70,11 @@ body {
 }
 
 .photo {
+    display: block;
     max-width: 200px;
     border-radius: 100px;
-    margin: 10px;
+    margin: 0 auto 50px auto;
+    border: 1px solid var(--text-color-dark);
 }
 
 .section-content {
@@ -71,7 +83,7 @@ body {
 
 #about-me-paragraph {
     color: var(--text-color-dark);
-    padding: 70px;
+    padding: auto;
 }
 
 .row {
@@ -89,7 +101,7 @@ body {
     text-decoration: none;
     text-shadow: none;
     margin: 10px;
-    color: white;
+    color: var(--white);
 }
 
 .navigation > a:hover {
@@ -166,11 +178,8 @@ body {
     margin: 70px;
 }
 
-#porfolio{
-    background-color: #3F3D56;
-}
-
 #portfolio-paragraph {
+    color: var(--text-color-dark);
     margin-top: 0;
     padding-top: 60px;
 }
