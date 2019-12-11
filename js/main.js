@@ -1,25 +1,32 @@
-//Loading screen
-$(document).ready(function(){
-  $('.loading').delay(1200).hide(0);
-  setTimeout(function(){
-    $('#bobbie').removeClass('hidden');
-  }, 1200);
-});
-// // Animate the title test
-// $('#title').text('Front-end')
-//   .delay(800)
-//   .slideDown(800)
-//   .slideUp(800, function(){
-//     $('#title').text('Back-end')
-//     .delay(800)
-//     .slideDown(800)
-//     .delay(800)
-//     .slideUp(800);
-//   });
+//Let's set the nav listeners
+// TODO : See if this can be refactored with a loop
 
-// // Animate Bobbie on scroll
-// $(window).scroll(function(){
-//     if($(window).scrollTop() > 450){
-//         $("#bobbie").animate({right: 1000});
-//     }
-// });
+$('#nav-about-me').click(function(ev){
+  ev.preventDefault();
+  $('.slider-landing').slideUp('slow');
+  $('.slider-about').slideDown('slow');
+  $('footer').show();
+});
+
+$('#nav-portfolio').click(function(ev){
+  ev.preventDefault();
+  $('.slider-landing').slideUp('slow');
+  $('.slider-portfolio').slideDown('slow');
+  $('footer').show();
+});
+
+$('#nav-skills').click(function(ev){
+  ev.preventDefault();
+  $('.slider-landing').slideUp('slow');
+  $('.slider-skills').slideDown('slow');
+  $('footer').show();
+});
+
+$('#nav-contact').click(function(ev){
+  ev.preventDefault();
+  $('.slider-landing').slideUp('slow');
+  $('.slider-contact').slideDown('slow');
+  $('footer').show();
+});
+
+//nav-skills

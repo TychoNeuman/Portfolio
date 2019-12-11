@@ -8,74 +8,98 @@
     <title>Tycho's Portfolio</title>
 </head>
 <body>
-    <section class="landing-page full-height flex">
+    <div class="slider-landing">
+        <section class="landing-page full-height flex">
             <nav class="navigation text-centered">
-                    <a href="#about-me">About Me</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#" id="nav-about-me">About Me</a>
+                    <a href="#" id="nav-portfolio">Portfolio</a>
+                    <a href="#" id="nav-skills">Skills</a>
+                    <a href="#" id="nav-contact">Contact</a>
                 </nav>
             <h1 id="profile-name" class="text-centered">Tycho Neuman</h1>
             <img src="img/bobbie.png" alt="A picture of Bobbie the Bot" id="bobbie">
             <h3 id="profile-title">Front- and Backend Developer</h3>
-    </section>
-    <section id="about-me" class="about-me flex">
-        <h1 class="section-title">Who<br /> I<br /> am</h1>
-        <div class="section-container">
-            <img src="img/1.svg" alt="image">
-        </div>
-    </section>
-    <section class="section-content">
-        <p class="text-centered" id="about-me-paragraph">
-            Hi,<br /> 
-            I'm Tycho.<br /> 
-            I enjoy coding, traveling, <br />
-            music, discussions, making lists, <br />
-            triangles, studying and watching Netflix <br />
-            with my girlfriend on a mattresss in the living<br /> 
-            room. Recently, I got into Frontend Development at Team <br />
-            Treehouse, as part of my traineeship at Young Coders, which I can say; <br />
-            I'm enjoying at lot. If you want to get in touch with me and have a nice site build, <br /> 
-            feel free to contact me <a href="#">here</a>. I also need some more text to finish this pyramid I got going here.<br />
-            Nulla tincidunt consequat lorem ut semper. Etiam congue sodales turpis. Quisque in <br /> 
-            pretium enim. Vestibulum ante ipsum primis in faucibus orci luctus et <br />
-            ultrices posuere cubilia Curae; In a dui a elit gravida<br />
-            convallis.Donec ac libero sed quam porttitor luctus.<br /> 
-            Praesent volutpat luctus justo, nec sodales<br /> 
-            sem feugiat in. Suspendisse id euismod<br /> 
-            nisl. Integer vitae vulputate<br /> 
-            purus. Quisque<br /> 
-            inemsom
-        </p>    
-    </section>
-    <section id="portfolio" class="portfolio flex">
-        <img src="img/2.svg" alt="image">
-        <h1 class="section-title text-right">What<br /> I<br /> do</h1>
-    </section> 
-    <section id="porfolio" class="section-content">
-        <p class="text-centered" id="portfolio-paragraph">Let's take a look at some of the work I've done:</p>
-        <div class="row flex">
-            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
-            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
-            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
-            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
-        </div>
-    </section> 
-    <section id="skills" class="skills flex">
-        <h1 class="section-title">What<br /> I'm<br /> good<br /> at</h1>
-        <div class="section-container">
-            <img src="img/3.svg" alt="image">
-        </div>
-    </section>
-    <section class="section-content">
-    </section>
-    <section id="contact" class="contact flex">
+        </section>
+    </div>
+    <div class="slider-about hidden">
+        <section id="about-me" class="about-me full-height flex">
+            <h1 class="section-title">Who I am</h1>
             <div class="section-container">
-                <img src="img/4.svg" alt="image">
+                <div class="about-me-background"></div>
             </div>
-        <h1 class="section-title text-right">How<br /> to<br /> reach<br /> me</h1>
-    </section>
-    <section class="section-content">
-    </section>
+        </section>
+        <section class="section-content">
+            <p class="text-centered" id="about-me-paragraph">
+                Hi,<br />
+                I'm Tycho.<br /> 
+                I enjoy coding, traveling, <br />
+                music, discussions, making lists, <br />
+                triangles, studying and watching Netflix <br />
+                with my girlfriend on a mattresss in the living<br /> 
+                room. Recently, I got into Frontend Development at Team <br />
+                Treehouse, as part of my traineeship at Young Coders, which I can say; <br />
+                I'm enjoying at lot. If you want to get in touch with me and have a nice site build, <br /> 
+                <img src="img/tycho.jpg" class="photo" style="float:initial" alt="">
+                feel free to contact me <a href="#">here</a>. I also need some more text to finish this pyramid I got going here.<br />
+                Nulla tincidunt consequat lorem ut semper. Etiam congue sodales turpis. Quisque in <br /> 
+                pretium enim. Vestibulum ante ipsum primis in faucibus orci luctus et <br />
+                ultrices posuere cubilia Curae; In a dui a elit gravida<br />
+                convallis.Donec ac libero sed quam porttitor luctus.<br /> 
+                Praesent volutpat luctus justo, nec sodales<br /> 
+                sem feugiat in. Suspendisse id euismod<br /> 
+                nisl. Integer vitae vulputate<br /> 
+                purus. Quisque<br /> 
+                inemsom
+            </p>    
+        </section>
+    </div>
+    <div class="slider-portfolio hidden">
+        <section id="portfolio" class="portfolio full-height flex">
+            <div class="section-container">
+                <div class="portfolio-background"></div>
+            </div>
+            <h1 class="section-title text-right">What I do</h1>
+        </section> 
+        <section id="porfolio" class="section-content">
+            <p class="text-centered" id="portfolio-paragraph">Let's take a look at some of the work I've done:</p>
+        <!-- <div class="row flex">
+            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
+            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
+            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
+            <img src="img/portfolio-1.png" alt="afas" class="portfolio-image">
+        </div> -->
+        </section> 
+    </div>
+    <div class="slider-skills hidden">
+        <section id="skills" class="skills full-height flex">
+            <h1 class="section-title">What I'm good at</h1>
+            <div class="section-container">
+                <div class="skills-background"></div>
+            </div>
+        </section>
+        <section class="section-content">
+        </section>
+    </div>
+    <div class="slider-contact hidden">
+        <section id="contact" class="contact full-height flex">
+            <div class="section-container">
+                <div class="contact-background"></div>
+            </div>
+            <h1 class="section-title text-right">How to reach me</h1>
+        </section>
+        <section class="section-content">
+        </section>
+    </div>
+    <footer class="hidden">
+        <button onclick="reload()" class="footer">Go back!</button>
+    </footer>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
+<script>
+function reload(){
+    window.location.reload();
+}
+</script>
