@@ -6,12 +6,6 @@
  * confusing to look at it now, so just don't touch it and everything should be fine.
 **/
 
-// $l_eHomeElement = $('.slider-landing');
-// $l_eAboutElement = $('.slider-about');
-// $l_ePortfolioElement = $('.slider-portfolio');
-// $l_eSkillsElement = $('.slider-skills');
-// $l_eContactElement = $('.slider-contact');
-
 l_aElementObjects = [
   {
     'sliderElement' : $('.slider-landing'),
@@ -43,19 +37,23 @@ l_aElementObjects = [
     'currentlyActive' : false,
     'id' : 'nav-contact'
   }
-]
+];
 
-l_aElementObjects.forEach((element) => {         
-  element.navElement.click((clickedElement) => {
-    l_aElementObjects.forEach(element => {     
-      if(element.currentlyActive === true){
-        element.sliderElement.slideUp('slow');
-        element.currentlyActive = false;
+for(l_oElement of l_aElementObjects){
+  l_oElement.navElement.click(clickedElement => {
+    loop:
+    for(l_oSlideUp of l_aElementObjects){
+      if(l_oSlideUp.currentlyActive === true){
+        l_oSlideUp.sliderElement.slideUp('slow');
+        l_oSlideUp.currentlyActive = false;
+        for(l_oSlideDown of l_aElementObjects){
+          if(l_oSlideDown.id === clickedElement.currentTarget.id){
+            l_oSlideDown.sliderElement.slideDown('slow');
+            l_oSlideDown.currentlyActive = true;
+            break loop;
+          }
+        }
       }
-      if(element.id === clickedElement.currentTarget.id){
-        element.sliderElement.slideDown('slow');
-        element.currentlyActive = true;
-      }
-    });
+    }
   });
-});
+}
