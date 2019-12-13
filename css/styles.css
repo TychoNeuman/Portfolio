@@ -31,7 +31,30 @@ body {
     font-family: 'Inconsolata', monospace;
     color: var(--white);
     box-sizing: border-box;
-    background-color: var(--white);
+    background-image: url(../img/backgroundpaterns/cork-wallet.png);
+  }
+
+  h3 {
+      margin: 13px 3px 3px 3px;
+  }
+
+  hr {
+      max-width: 40%;
+      margin: 10px auto;
+  }
+
+  li {
+      color: black;
+  }
+
+  ul {
+      text-align: center;
+      list-style: none;
+      margin: auto;
+  }
+
+  p {
+      margin: 0;
   }
 
 /* All-Round */
@@ -73,23 +96,28 @@ body {
     display: block;
     max-width: 200px;
     border-radius: 100px;
-    margin: 11px auto;
     border: 1px solid var(--text-color-dark);
+    margin: 20px auto;
 }
 
 .section-content {
     min-height: 100vh;
+    margin: auto;
 }
 
 #about-me-paragraph {
+    font-size: 1.8rem;
     color: var(--text-color-dark);
     vertical-align: middle;
-    padding-top: 77px;
+    padding-top: 30px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .row {
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -100,6 +128,11 @@ body {
 /* Navigation */
 .navigation {
     margin: 10px;
+    position: fixed;
+    background-color: var(--white);
+    border-radius: 7px;
+    border: 1px solid var(--text-color-dark);
+    padding: 4px;
 }
 
 .navigation > a {
@@ -107,10 +140,6 @@ body {
     text-shadow: none;
     margin: 10px;
     color: var(--white);
-}
-
-.navigation > a:hover {
-    color: var(--text-color-dark);
 }
 
 /* Landing Page */
@@ -133,7 +162,7 @@ body {
 .about-me-background {
     width: 100%;
     height: 100%;
-    background-image: url(..//img/1.svg);
+    background-image: url(../img/1.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -162,10 +191,9 @@ body {
 }
 
 .portfolio-image {
-    max-width: 300px;
+    position: absolute;
     border: 1px solid var(--text-color-dark);
     box-shadow: 10px 10px 5px grey;
-    margin: 60px 0;
 }
 
 /* Skills */
@@ -173,6 +201,14 @@ body {
     flex-direction: column;
     background-color: var(--skills-background-color);
     justify-content: space-between;
+}
+
+.skills-content {
+    font-size: 1.1rem;
+    max-width: 900px; 
+    color: black; 
+    margin: auto; 
+    margin-top: 70px;
 }
 
 .skills-background {
@@ -184,6 +220,16 @@ body {
 }
 
 /* Contact */
+
+.social {
+    max-width: 200px;
+}
+
+.contact-content {
+    margin-top: 100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .contact {
     flex-direction: column;
@@ -198,20 +244,6 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
-
-/* Footer */
-
-/* button {
-    background-color: var(--landing-page-background);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-} */
-
 
 /*.........../*/
 /*/ - Id's - /*/
@@ -238,6 +270,36 @@ body {
     color: var(--text-color-dark);
     margin-top: 0;
     padding-top: 60px;
+}
+
+#portfolio-image-1 {
+    bottom: -502px;
+    right: 996px;
+    max-width: 200px;
+}
+
+#portfolio-image-2 {
+    bottom: -327px;
+    right: 777px;
+    max-width: 300px;
+}
+
+#portfolio-image-3 {
+    bottom: -555px;
+    right: 637px;
+    max-width: 320px;
+}
+
+#portfolio-image-4 {
+    bottom: -347px;
+    right: 522px;
+    max-width: 210px;
+}
+
+#portfolio-image-5 {
+    bottom: -569px;
+    right: 285px;
+    max-width: 294px;
 }
 
 /*/.................../*/

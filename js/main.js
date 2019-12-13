@@ -6,50 +6,59 @@
  * confusing to look at it now, so just don't touch it and everything should be fine.
 **/
 
-l_aElementObjects = [
-  {
-    'sliderElement' : $('.slider-landing'),
-    'navElement' : $('#nav-home'),
-    'currentlyActive' : true,
-    'id' : 'nav-home'
-  },
-  {
-    'sliderElement' : $('.slider-about'),
-    'navElement' : $('#nav-about-me'),
-    'currentlyActive' : false,
-    'id' : 'nav-about-me'
-  },
-  {
-    'sliderElement' : $('.slider-portfolio'),
-    'navElement' : $('#nav-portfolio'),
-    'currentlyActive' : false,
-    'id' : 'nav-portfolio'
-  },
-  {
-    'sliderElement' : $('.slider-skills'),
-    'navElement' : $('#nav-skills'),
-    'currentlyActive' : false,
-    'id' : 'nav-skills'
-  },
-  {
-    'sliderElement' : $('.slider-contact'),
-    'navElement' : $('#nav-contact'),
-    'currentlyActive' : false,
-    'id' : 'nav-contact'
+class l_oElementObject {
+  constructor(p_eSlider, p_eNav, p_bIsActive, p_sId){
+    this.sliderElement = p_eSlider,
+    this.navElement =  p_eNav,
+    this.isActive = p_bIsActive,
+    this.id = p_sId 
   }
+};
+
+l_aElementObjects = [
+  new l_oElementObject(
+    $('.slider-landing'),
+    $('#nav-home'),
+    true,
+    'nav-home'
+  ),
+  new l_oElementObject(
+    $('.slider-about'),
+    $('#nav-about-me'),
+    false,
+    'nav-about-me'
+  ),
+  new l_oElementObject(
+    $('.slider-portfolio'),
+    $('#nav-portfolio'),
+    false,
+    'nav-portfolio'
+  ),
+  new l_oElementObject(
+    $('.slider-skills'),
+    $('#nav-skills'),
+    false,
+    'nav-skills'
+  ),
+  new l_oElementObject(
+    $('.slider-contact'),
+    $('#nav-contact'),
+    false,
+    'nav-contact'
+  )
 ];
 
 for(l_oElement of l_aElementObjects){
   l_oElement.navElement.click(clickedElement => {
     loop:
     for(l_oSlideUp of l_aElementObjects){
-      if(l_oSlideUp.currentlyActive === true){
+      if(l_oSlideUp.isActive === true){
         l_oSlideUp.sliderElement.slideUp('slow');
-        l_oSlideUp.currentlyActive = false;
+        l_oSlideUp.isActive = false;
         for(l_oSlideDown of l_aElementObjects){
           if(l_oSlideDown.id === clickedElement.currentTarget.id){
             l_oSlideDown.sliderElement.slideDown('slow');
-            l_oSlideDown.currentlyActive = true;
+            l_oSlideDown.isActive = true;
             break loop;
           }
         }
