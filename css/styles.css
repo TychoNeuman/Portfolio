@@ -133,6 +133,10 @@ body {
     display: none;
 }
 
+.active {
+    color: var(--landing-page-background) !important;
+}
+
 /* Navigation */
 .navigation {
     margin: 10px;
@@ -147,7 +151,7 @@ body {
     text-decoration: none;
     text-shadow: none;
     margin: 10px;
-    color: var(--white);
+    color: var(--text-color-dark);
 }
 
 /* Landing Page */

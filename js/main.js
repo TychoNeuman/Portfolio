@@ -53,10 +53,12 @@ for(l_oElement of l_aElementObjects){
     loop:
     for(l_oSlideUp of l_aElementObjects){
       if(l_oSlideUp.isActive === true){
+        l_oSlideUp.navElement.removeClass('active');
         l_oSlideUp.sliderElement.slideUp('slow');
         l_oSlideUp.isActive = false;
         for(l_oSlideDown of l_aElementObjects){
           if(l_oSlideDown.id === clickedElement.currentTarget.id){
+            l_oSlideDown.navElement.addClass('active');
             l_oSlideDown.sliderElement.slideDown('slow');
             l_oSlideDown.isActive = true;
             break loop;
