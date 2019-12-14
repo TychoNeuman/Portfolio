@@ -51,7 +51,7 @@ body {
   ul {
       text-align: center;
       list-style: none;
-      margin: auto;
+      margin: 4%;
   }
 
   p {
@@ -152,19 +152,17 @@ body {
 
 /* Navigation */
 .navigation {
-    margin: 10px;
-    position: fixed;
-    background-color: var(--white);
-    border-radius: 7px;
-    border: 1px solid var(--text-color-dark);
-    padding: 4px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ background-color: var(--white);
 }
 
 .navigation > a {
     text-decoration: none;
-    text-shadow: none;
-    margin: 10px;
-    color: var(--text-color-dark);
+    font-size: 1.3em;
+    color: black;
+    margin: 5px;
 }
 
 /* Landing Page */
@@ -178,10 +176,14 @@ body {
 
 /* About Me */
 
-.about-me {
+.about-me-title {
     flex-direction: column;
     background-color: var(--about-me-background);
     justify-content: space-between;
+}
+
+.about-me-content {
+    flex-direction: column;
 }
 
 .about-me-background {
@@ -215,14 +217,22 @@ body {
     background-size: 100%;
 }
 
+.portfolio-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .portfolio-image {
-    position: absolute;
-    border: 1px solid var(--text-color-dark);
-    box-shadow: 10px 10px 5px grey;
+    max-width: 100%;
+    margin:  10px auto;
+    /* max-width: 40%;
+    padding: 10px; */
 }
 
 .portfolio-image:hover {
     filter: brightness(110%);
+    transform: scale(1.1);
 }
 
 /* Skills */
@@ -247,10 +257,20 @@ body {
     background-size: 100%;
 }
 
+.skills-mobile {
+    display: initial;
+}
+
+.skills-desktop {
+    display: none;
+}
+
 /* Contact */
 
 .social {
     max-width: 130px;
+    padding: 20px;
+    margin: auto;
 }
 
 .social:hover {
@@ -259,8 +279,8 @@ body {
 
 .contact-content {
     padding: 40px;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact {
@@ -298,12 +318,12 @@ body {
 }
 
 #about-me-paragraph {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     color: var(--text-color-dark);
     vertical-align: middle;
     padding-top: 30px;
     max-width: 800px;
-    margin: auto;
+    margin: 4%;
 }
 
 #bobbie{
@@ -324,35 +344,6 @@ body {
     padding-top: 60px;
 }
 
-#portfolio-image-1 {
-    bottom: -71%;
-    right: 66%;
-    max-width: 15%;
-}
-
-#portfolio-image-2 {
-    bottom: -47%;
-    right: 50%;
-    max-width: 20%;
-}
-
-#portfolio-image-3 {
-    bottom: -80%;
-    right: 41%;
-    max-width: 22%;
-}
-
-#portfolio-image-4 {
-    bottom: -44%;
-    right: 21%;
-    max-width: 22%;
-}
-
-#portfolio-image-5 {
-    bottom: -75%;
-    right: 16%;
-    max-width: 20%;
-}
 
 #contact-paragraph {
     color: var(--text-color-dark);
@@ -365,12 +356,80 @@ body {
 /*/.................../*/
 
 @media only screen and (min-width: 972px) {
-    .about-me {
+
+    .navigation {
+        display: block;
+        margin: 10px;
+        position: fixed;
+        background-color: var(--white);
+        border-radius: 7px;
+        border: 1px solid var(--text-color-dark);
+        padding: 4px;
+    }
+    
+    .navigation > a {
+        text-decoration: none;
+        text-shadow: none;
+        margin: 10px;
+        color: var(--text-color-dark);
+    }
+
+    ul {
+        margin: auto;
+    }
+
+    .about-me-title {
         flex-direction: row;
+    }
+
+    .about-me-content {
+        flex-direction: row;
+    }
+
+    #about-me-paragraph {
+        font-size: 1.8rem;
+        margin: auto;
     }
 
     .portfolio {
         flex-direction: row;
+    }
+
+    .portfolio-image {
+        position: absolute;
+        border: 7px solid var(--white);
+        box-shadow: 10px 10px 5px grey;
+        padding: 0;
+    }
+
+    #portfolio-image-1 {
+        bottom: -71%;
+        right: 66%;
+        max-width: 15%;
+    }
+    
+    #portfolio-image-2 {
+        bottom: -47%;
+        right: 50%;
+        max-width: 20%;
+    }
+    
+    #portfolio-image-3 {
+        bottom: -80%;
+        right: 41%;
+        max-width: 22%;
+    }
+    
+    #portfolio-image-4 {
+        bottom: -44%;
+        right: 21%;
+        max-width: 22%;
+    }
+    
+    #portfolio-image-5 {
+        bottom: -75%;
+        right: 16%;
+        max-width: 20%;
     }
 
     .skills {
@@ -386,6 +445,19 @@ body {
     }
     .section-container {
         height: 100vh;
+    }
+
+    .skills-mobile {
+        display: none;
+    }
+
+    .skills-desktop {
+        display: initial;
+    }
+
+    .contact-content {
+        flex-direction: row;
+        justify-content: center;
     }
   }
 
