@@ -31,11 +31,12 @@ body {
     font-family: 'Inconsolata', monospace;
     color: var(--white);
     box-sizing: border-box;
-    background-image: url(../img/backgroundpaterns/cork-wallet.png);
+    background-image: url(../images/backgroundpaterns/cork-wallet.png);
   }
 
   h3 {
       margin: 13px 3px 3px 3px;
+      color: var(--text-color-dark);
   }
 
   hr {
@@ -57,7 +58,28 @@ body {
       margin: 0;
   }
 
-/* All-Round */
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  /* All-Round */
 
 .full-height {
     min-height: 100vh;
@@ -113,15 +135,6 @@ body {
     margin: auto;
 }
 
-#about-me-paragraph {
-    font-size: 1.8rem;
-    color: var(--text-color-dark);
-    vertical-align: middle;
-    padding-top: 30px;
-    max-width: 800px;
-    margin: auto;
-}
-
 .row {
     flex-wrap: wrap;
     flex-direction: row;
@@ -174,7 +187,7 @@ body {
 .about-me-background {
     width: 100%;
     height: 100%;
-    background-image: url(../img/1.svg);
+    background-image: url(../images/1.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -197,7 +210,7 @@ body {
 .portfolio-background {
     width: 100%;
     height: 100%;
-    background-image: url(../img/2.svg);
+    background-image: url(../images/2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -206,6 +219,10 @@ body {
     position: absolute;
     border: 1px solid var(--text-color-dark);
     box-shadow: 10px 10px 5px grey;
+}
+
+.portfolio-image:hover {
+    filter: brightness(110%);
 }
 
 /* Skills */
@@ -225,7 +242,7 @@ body {
 .skills-background {
     width: 100%;
     height: 100%;
-    background-image: url(../img/3.svg);
+    background-image: url(../images/3.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -233,11 +250,15 @@ body {
 /* Contact */
 
 .social {
-    max-width: 200px;
+    max-width: 130px;
+}
+
+.social:hover {
+    transform: scale(1.1);
 }
 
 .contact-content {
-    margin-top: 100px;
+    padding: 40px;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -251,9 +272,20 @@ body {
 .contact-background {
     width: 100%;
     height: 100%;
-    background-image: url(../img/4.svg);
+    background-image: url(../images/4.svg);
     background-repeat: no-repeat;
     background-size: 100%;
+}
+
+.form-container > form {
+    padding: 50px;
+    margin: auto;
+}
+
+.form-container input,
+.form-container textarea {
+    margin: 15px;
+    width: 100%;
 }
 
 /*.........../*/
@@ -263,6 +295,15 @@ body {
 #profile-name{
     font-family: 'Shadows Into Light', cursive;
     font-size: 3em;
+}
+
+#about-me-paragraph {
+    font-size: 1.8rem;
+    color: var(--text-color-dark);
+    vertical-align: middle;
+    padding-top: 30px;
+    max-width: 800px;
+    margin: auto;
 }
 
 #bobbie{
@@ -284,33 +325,39 @@ body {
 }
 
 #portfolio-image-1 {
-    bottom: -502px;
-    right: 996px;
-    max-width: 200px;
+    bottom: -71%;
+    right: 66%;
+    max-width: 15%;
 }
 
 #portfolio-image-2 {
-    bottom: -327px;
-    right: 777px;
-    max-width: 300px;
+    bottom: -47%;
+    right: 50%;
+    max-width: 20%;
 }
 
 #portfolio-image-3 {
-    bottom: -555px;
-    right: 637px;
-    max-width: 320px;
+    bottom: -80%;
+    right: 41%;
+    max-width: 22%;
 }
 
 #portfolio-image-4 {
-    bottom: -347px;
-    right: 522px;
-    max-width: 210px;
+    bottom: -44%;
+    right: 31%;
+    max-width: 14%;
 }
 
 #portfolio-image-5 {
-    bottom: -569px;
-    right: 285px;
-    max-width: 294px;
+    bottom: -75%;
+    right: 16%;
+    max-width: 20%;
+}
+
+#contact-paragraph {
+    color: var(--text-color-dark);
+    margin-top: 40px;
+    padding-top: 60px;
 }
 
 /*/.................../*/
