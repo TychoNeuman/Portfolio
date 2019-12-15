@@ -6,7 +6,6 @@
 /*/ - Colors - /*/
 /*/............/*/
 :root {
-    /* --text-color: #2B2118; */
     --text-color: white;
     --text-color-dark: #2B2118;
     --landing-page-background: #41B3A3;
@@ -220,14 +219,25 @@ body {
 .portfolio-gallery {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .portfolio-image {
-    max-width: 100%;
-    margin:  10px auto;
-    /* max-width: 40%;
-    padding: 10px; */
+    max-width: 90%;
+    margin-top: 10px;
+    /* margin: 4px; */
+    /* border: 7px solid var(--white); */
+    box-shadow: 10px 10px 5px grey;
+    background-color: var(--white);
+    color: var(--text-color-dark);
+}
+
+.portfolio-image  img {
+    width: 100%;
+}
+
+.portfolio-image p {
+    padding: 2px;
 }
 
 .portfolio-image:hover {
@@ -298,7 +308,7 @@ body {
 }
 
 .form-container > form {
-    padding: 50px;
+    padding: 30px;
     margin: auto;
 }
 
@@ -368,6 +378,7 @@ body {
     }
     
     .navigation > a {
+        font-size: 1.1em;
         text-decoration: none;
         text-shadow: none;
         margin: 10px;
@@ -395,41 +406,12 @@ body {
         flex-direction: row;
     }
 
-    .portfolio-image {
-        position: absolute;
-        border: 7px solid var(--white);
-        box-shadow: 10px 10px 5px grey;
-        padding: 0;
+    .portfolio-gallery {
+        flex-direction: row;
     }
 
-    #portfolio-image-1 {
-        bottom: -71%;
-        right: 66%;
-        max-width: 15%;
-    }
-    
-    #portfolio-image-2 {
-        bottom: -47%;
-        right: 50%;
-        max-width: 20%;
-    }
-    
-    #portfolio-image-3 {
-        bottom: -80%;
-        right: 41%;
-        max-width: 22%;
-    }
-    
-    #portfolio-image-4 {
-        bottom: -44%;
-        right: 21%;
-        max-width: 22%;
-    }
-    
-    #portfolio-image-5 {
-        bottom: -75%;
-        right: 16%;
-        max-width: 20%;
+    .portfolio-image {
+        max-width: 30%;
     }
 
     .skills {

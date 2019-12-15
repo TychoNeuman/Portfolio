@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Tycho's Portfolio</title>
 </head>
@@ -45,7 +44,9 @@
                 </p>   
                 <hr>
                 <ul>
-                    <h3>Experience</h3>
+                    <li>
+                        <h3>Experience</h3>
+                    </li>
                     <li>
                         <h3>Q.i</h3>
                         <p>2017-current</p>
@@ -71,40 +72,64 @@
                 </div>
                 <h1 class="section-title text-right">What I do</h1>
             </section> 
-            <section id="porfolio" class="section-content">
+            <section id="porfolio-content" class="section-content">
                 <p class="text-centered" id="portfolio-paragraph">Let's take a look at some of the work I've done:</p>
-            <div class="flex portfolio-gallery">
-                <a href="images/portfolio/afas.png" 
-                data-lightbox="portfolio-lightbox"
-                data-title="I've been brought on as a PHP developer for MGZ Huishoudboekje. 
-                Skills include: PHP, Javascript, HTML, CSS, Zend and EmberJs">
-                    <img src="images/portfolio/afas.png" alt="Portfolio1" id="portfolio-image-1" class="portfolio-image">
-                </a>
-                <a href="images/portfolio/wos.PNG" 
-                data-lightbox="portfolio-lightbox" 
-                data-title="A fun little game where you have to guess a word.
-                Skills include: Javascript, HTML and CSS">
-                    <img src="images/portfolio/wos.PNG" alt="Portfolio2" id="portfolio-image-2" class="portfolio-image">
-                </a>
-                <a href="images/portfolio/sns.PNG"  
-                data-lightbox="portfolio-lightbox" 
-                data-title="The visit card website for producing duo Snoet and Smoel. 
-                Skills include: HTML and CSS">
-                    <img src="images/portfolio/sns.PNG" alt="Portfolio3" id="portfolio-image-3" class="portfolio-image">
-                </a>
-                <a href="images/portfolio/employee.PNG" 
-                data-lightbox="portfolio-lightbox" 
-                data-title="A directory that fetches random employees and shows their info. 
-                Skills include: The fetch API, Javascript, HTML and CSS">
-                    <img src="images/portfolio/employee.PNG" alt="Portfolio4" id="portfolio-image-4" class="portfolio-image">
-                </a>
-                <a href="images/portfolio/htvedu.PNG" 
-                data-lightbox="portfolio-lightbox" 
-                data-title="An environment that tests potential police recruits.
-                Skills include: PHP, MySQL, Jquery, Javscript, HTML and CSS">
-                    <img src="images/portfolio/htvedu.PNG" alt="Portfolio5" id="portfolio-image-5" class="portfolio-image">
-                </a>
-            </div>
+                <div class="flex portfolio-gallery">
+                    <div class="portfolio-image">
+                        <a href="https://tychoneuman.github.io/techdegree-unit6-wheel/" target="_blank"> 
+                            <img src="images/portfolio/port1.PNG" alt="Portfolio1">
+                        </a>
+                        <p><strong>Wheel of success</strong></p>
+                        <p>Fun little game where you have guess a word.</p>
+                        <p><strong>Skills include:</strong></p>
+                        <p>Javascript, HTML, CSS</p>
+                    </div>
+                    <div class="portfolio-image">
+                        <a href="https://tychoneuman.github.io/techdegree-unit3-responsiveform/" target="_blank"> 
+                            <img src="images/portfolio/port2.PNG" alt="Portfolio2">
+                        </a>
+                        <p><strong>The Code Review</strong></p>
+                        <p>A nice looking responsive form.</p>
+                        <p><strong>Skills include:</strong></p>
+                        <p>HTML, CSS</p>
+                    </div>
+                    <div class="portfolio-image">
+                        <a href="https://tychoneuman.github.io/techdegree-unit5-lightbox/" target="_blank"> 
+                            <img src="images/portfolio/port3.PNG" alt="Portfolio3">
+                        </a>
+                        <p><strong>Lightbox Gallery</strong></p>
+                        <p>A gallery that uses Lightbox and let's you search for photo's.</p>
+                        <p><strong>Skills include:</strong></p>
+                        <p>HTML, CSS, Javascript, jQuery, Lightbox</p>
+                    </div>
+                    <div class="portfolio-image">
+                        <a href="https://tychoneuman.github.io/techdegree-unit4-sass/" target="_blank"> 
+                            <img src="images/portfolio/port4.PNG" alt="Portfolio4">
+                        </a>
+                        <p><strong>Circles UI Kit</strong></p>
+                        <p>A nice looking webstyle guide that can be re-used for multiple websites.</p>
+                        <p><strong>Skills include:</strong></p>
+                        <p>HTML, CSS, SASS</p>
+                    </div>
+                    <div class="portfolio-image">
+                        <a href="https://tychoneuman.github.io/Unit-7/" target="_blank"> 
+                            <img src="images/portfolio/port5.PNG" alt="Portfolio5">
+                        </a>
+                        <p><strong>YourApp Dashboard</strong></p>
+                        <p>For all your CMS needs, this dashboard shows all the info you need!</p>
+                        <p><strong>Skills include:</strong></p>
+                        <p>HTML, CSS, Javascript, ChartsJS</p>
+                    </div>
+                    <div class="portfolio-image">
+                        <a href="https://tychoneuman.github.io/techdegree-unit8/" target="_blank"> 
+                            <img src="images/portfolio/port6.PNG" alt="Portfolio6">
+                        </a>
+                        <p><strong>Awesome Startup Directory</strong></p>
+                        <p>Using the Fetch API, this directory fetches random employees and displays them!</p>
+                        <p><strong>Skills include:</strong></p>
+                        <p>HTML, CSS, Javascript, Fetch API</p>
+                    </div>
+                </div>
             </section> 
         </div>
         <div class="slider-skills hidden">
@@ -115,8 +140,7 @@
                 </div>
             </section>
             <section class="section-content-skills">
-                <span class="skills-desktop">
-                <p class="text-centered skills-content">
+                <p class="skills-desktop text-centered skills-content">
                     PHP JavaScript HTML <strong style="font-size: 2em;">CSS</strong> SASS ZEND LARAVEL GIT REACT <strong style="font-size: 2em;">SYMFONY</strong> JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER
                     GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP <strong style="font-size: 2em;">JavaScript</strong> HTML CSS SASS ZEND LARAVEL
                     CSS SASS ZEND LARAVEL GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP JavaScript HTML
@@ -134,16 +158,13 @@
                     CSS SASS ZEND LARAVEL <strong style="font-size: 2em;">GIT</strong> REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP JavaScript HTML
                     PHP JavaScript HTML CSS <strong style="font-size: 2em;">SASS</strong> ZEND LARAVEL GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON <strong style="font-size: 2em;">BOOTSTRAP</strong> EMBER
                 </p>
-            </span>
-                <span class="skills-mobile">
-                    <p class="text-centered skills-content">
-                        PHP JavaScript HTML <strong style="font-size: 2em;">CSS</strong> SASS ZEND LARAVEL GIT REACT <strong style="font-size: 2em;">SYMFONY</strong> JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER
-                        GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP <strong style="font-size: 2em;">JavaScript</strong> HTML CSS SASS ZEND LARAVEL
-                        CSS SASS ZEND LARAVEL GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP JavaScript HTML
-                        PHP JavaScript HTML CSS SASS ZEND <strong style="font-size: 2em;">LARAVEL</strong> GIT REACT SYMFONY JENKINS JAVA <strong style="font-size: 2em;">MYSQL</strong> JQUERY JSON BOOTSTRAP EMBER
-                        GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP JavaScript HTML CSS SASS ZEND LARAVEL
-                    </p>
-                </span>
+                <p class="skills-mobile text-centered skills-content">
+                    PHP JavaScript HTML <strong style="font-size: 2em;">CSS</strong> SASS ZEND LARAVEL GIT REACT <strong style="font-size: 2em;">SYMFONY</strong> JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER
+                    GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP <strong style="font-size: 2em;">JavaScript</strong> HTML CSS SASS ZEND LARAVEL
+                    CSS SASS ZEND LARAVEL GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP JavaScript HTML
+                    PHP JavaScript HTML CSS SASS ZEND <strong style="font-size: 2em;">LARAVEL</strong> GIT REACT SYMFONY JENKINS JAVA <strong style="font-size: 2em;">MYSQL</strong> JQUERY JSON BOOTSTRAP EMBER
+                    GIT REACT SYMFONY JENKINS JAVA MYSQL JQUERY JSON BOOTSTRAP EMBER PHP JavaScript HTML CSS SASS ZEND LARAVEL
+                </p>
             </section>
             
         </div>
@@ -173,13 +194,6 @@
         </div>
     </main>
     <script src="js/jquery-min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script>
-        lightbox.option({
-          'albumLabel' : "",
-          'maxWidth' : 720
-        })
-    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
